@@ -1,3 +1,35 @@
+.pagintator {
+    clear: both;
+    display: block;
+    left: 50%;
+    position: relative;
+}
+.pagintator li {
+    display: inline;
+}
+
+.right-sidebar-category{
+    float: right;
+    padding-right: 30px;
+}
+.navigateion{
+    border: 2px solid #ccc;
+    background: #322F32;
+}
+
+.open {
+    color:red;
+}
+
+
+ul{
+   
+    color:#000;
+}
+
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,8 +39,10 @@ body {
 	width: 100%;
 }
 .wrapper {
-	width: 1000px;
-	margin: 0 auto;
+	border: 1px solid #CCCCCC;
+        box-shadow: 0 0 5px 0 #CCCCCC;
+        margin: 0 auto;
+        width: 1000px;
 }
 
 
@@ -16,15 +50,24 @@ body {
 -----------------------------------------------------------------------------*/
 .header {
 	height: 150px;
-	background: #FFE680;
+        padding: 10px;
+	
 }
 
 
 /* Middle
 -----------------------------------------------------------------------------*/
+.top-menu ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+/* menu
+-----------------------------------------------------------------------------*/
 .middle {
-	width: 100%;
-	position: relative;
+	 margin-bottom: 15px;
+        position: relative;
+        width: 100%;
 }
 .middle:after {
 	display: table;
@@ -37,35 +80,44 @@ body {
 	overflow: hidden;
 }
 .content {
-	padding: 0 270px 0 270px;
+	padding-left: 25%;
+        padding-right: 25%;
 }
-
+.contentCategory{
+     
+     padding: 15px;
+     float:left;
+     width: 80%;
+}
 
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
 .left-sidebar {
-	float: left;
-	width: 250px;
-	margin-left: -100%;
-	position: relative;
-	background: #B5E3FF;
+	
+        float: left;
+        margin-left: -100%;
+        padding: 10px;
+        position: relative;
+        width: 20%;
 }
 
 
 /* Right Sidebar
 -----------------------------------------------------------------------------*/
 .right-sidebar {
-	float: left;
-	width: 250px;
-	margin-left: -250px;
-	position: relative;
-	background: #FFACAA;
+	
+        float: left;
+        margin-left: -222px;
+        padding: 10px;
+        position: relative;
+        width: 20%;
 }
 
 
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	height: 100px;
-	background: #BFF08E;
-}
+	border-top: 1px solid #CCCCCC;
+        height: 100px;
+        padding: 10px;
+    }

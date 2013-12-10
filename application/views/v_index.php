@@ -1,7 +1,7 @@
 <div class="content">
-			<?php if($content):?>
+			<?if($content):?>
                                 <?=$content['title']?>
-                        <?php endif?>
+                        <?endif?>
 			</div><!-- .content-->
 		</div><!-- .container-->
 
@@ -10,5 +10,5 @@
 		</div><!-- .left-sidebar -->
 
 		<div class="right-sidebar">
-			<?php echo $lastNews ?>
+			<?=$lastNews ?>
 		</div>

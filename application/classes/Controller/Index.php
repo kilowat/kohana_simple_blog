@@ -16,6 +16,8 @@ class Controller_Index extends Controller_Main{
                                          ->set('lastNews', $lastNews );
     
        $this->template->set('center',$center);
+       
+       
     }
 }
 

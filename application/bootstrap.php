@@ -126,21 +126,33 @@ Kohana::modules(array(
 	 'database'   => MODPATH.'database',   // Database access
 	 'image'      => MODPATH.'image',      // Image manipulation
 	// 'minion'     => MODPATH.'minion',     // CLI Tasks
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+	 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	 'unittest'   => MODPATH.'unittest',   // Unit testing
+          'orm-mptt'   => MODPATH.'orm-mptt', 
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	));
+        ));
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+Route::set('category', 'category(/<action>(/<category>(/<page>)))',array('category'=>'[a-zA-Z0-9_]+','page'=>'page_[0-9]+'))
+	->defaults(array(
+                'controller'=>'category',
+                'action'=>'index'
+	));
+Route::set('admin', 'admin(/<controller>(/<action>(/<param>)))',array('param'=>'[0-9]+'))
+	->defaults(array(
+                'directory' => 'admin',
+                'controller'=>'index',
+                'action'=>'index'
+	));
 Route::set('widjet', 'widjet/<controller>/<action>(/<param>)',array('param'=>'[0-9]+'))
 	->defaults(array(
                 'directory' => 'widjet',		
 	));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'Index',
+		'controller' => 'index',
 		'action'     => 'index',
 	));

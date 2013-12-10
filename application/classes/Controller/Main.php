@@ -13,7 +13,10 @@ class Controller_Main extends Controller_Template {
     public function before() {  
         parent::before();
             
-        $this->css = array('template/css/style.css');
+        $this->css = array('/template/css/style.css','/template/menu/css/jmenu.css');
+        $this->js = array('/template/menu/js/jquery-ui.js','/template/menu/js/jMenu.jquery.js');
+       
+        
                     
         
         $header = View::factory('v_header')->set('css', $this->css)
@@ -22,6 +25,9 @@ class Controller_Main extends Controller_Template {
                                             ->set('keywords',$this->keywords)
                                             ->set('description',$this->description);
         $this->template->set('header', $header);
+        
+        $topMenu = Request::factory('/widjet/topMenu/index')->execute();
+        $this->template->bind('topMenu', $topMenu);
         
         $footer = View::factory('v_footer');   
         $this->template->set('footer', $footer);
