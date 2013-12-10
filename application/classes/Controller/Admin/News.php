@@ -44,8 +44,7 @@ class Controller_Admin_News extends Controller_Admin_Main{
                 ->bind('error', $error);
         $this->template->set('center',$center);
          if($this->request->method()==='POST'){
-            $news = Arr::extract($_POST, array('alias','name','preview','body','date','descriptions','keywords','cat_id','title'));
-               
+            $news = Arr::extract($_POST, array('alias','name','preview','body','date','descriptions','keywords','cat_id','title'));        
             try{
           ORM::factory('News')->set('alias', $news['alias'])
                             ->set('name', $news['name'])
