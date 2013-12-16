@@ -15,14 +15,26 @@ class Model_News extends ORM{
           'foreign_key'=>'news_id'
       )  
     );
-        
+      
+    function allNews(){      
+      $result = DB::select('news.*','categories.title',DB::expr('COUNT(`comments`.`id`) AS total_comments'))
+                ->from("news")
+                ->join("comments", "LEFT")        
+                ->on("news.id", "=", "comments.news_id")
+                ->join("categories", "LEFT")        
+                ->on("news.cat_id", "=", "categories.id")
+                ->group_by("news.name")
+                ->as_object()->execute();                     
+            return $result;
+    }
     function rules() {
         return array(
             'name'=>array(
                 array('not_empty')                    
             ),
             'alias'=>array(
-                array(array($this,'alias_unique'),array(':field',':value'))
+                array(array($this,'alias_unique'),array(':field',':value')),
+                array('not_empty')
             )
         );
     }

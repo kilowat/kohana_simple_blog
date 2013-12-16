@@ -5,6 +5,7 @@
         <?=$arrErorr?><br>
     <?endforeach?>
 <?endif?>
+
     <form action="/admin/news/add" method="post">
         <select name="cat_id">
     <?foreach ($listCat as $list):?>
@@ -17,7 +18,6 @@
         <input type="text" name="title" value="">title<br>
          <input type="text" name="keywords" value="">Kewords<br>
          <input type="text" name="descriptions" value="">Description<br>
-         <input type="text" name="date" value="">Дата создания<br>
          <textarea name="preview" style="width: 500px" rows="10" cols="100"></textarea>Превью<br> 
           <textarea name="body" style="width: 500px" rows="10" cols="100"></textarea>Текст<br> 
     

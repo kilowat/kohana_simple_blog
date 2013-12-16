@@ -7,5 +7,8 @@
   });
 </script> 
 <div class="navigateion">
+    <ul class="main_page">
+        <li><a href="/">Главная</a></li>
+    </ul>
 <?php echo MpttMenu::render($tree);?>
 </div>

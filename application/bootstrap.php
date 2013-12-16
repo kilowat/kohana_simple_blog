@@ -22,7 +22,7 @@ else
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('Europe/Moscow');
 
 /**
  * Set the default locale.
@@ -136,6 +136,11 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+Route::set('comments_ajax', 'comments/<action>(/<id>)',array('action'=>'save|reload', 'id'=>'[0-9]+'))
+	->defaults(array(
+                'controller'=>'comments',
+                'action'=>'save'
+	));
 Route::set('category', 'category/<action>(/<category>(/<page>))',array('category'=>'[a-zA-Z0-9_]+','page'=>'page_[0-9]+','action'=>'view'))
 	->defaults(array(
                 'controller'=>'category',

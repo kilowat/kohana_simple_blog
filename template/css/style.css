@@ -1,13 +1,3 @@
-.pagintator {
-    clear: both;
-    display: block;
-    left: 50%;
-    position: relative;
-}
-.pagintator li {
-    display: inline;
-}
-
 .right-sidebar-category{
     float: right;
     padding-right: 30px;
@@ -64,6 +54,17 @@ body {
 
 /* menu
 -----------------------------------------------------------------------------*/
+.main_page > li {
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    height: 10px;
+    padding: 10px;
+    width: 45px;
+}
+.main_page > li a{
+    color:#FFFFFF;
+}
 .middle {
 	 margin-bottom: 15px;
         position: relative;
@@ -87,7 +88,7 @@ body {
      
      padding: 15px;
      float:left;
-     width: 80%;
+    
 }
 
 /* Left Sidebar
@@ -121,3 +122,24 @@ body {
         height: 100px;
         padding: 10px;
     }
+  
+.pagintator {
+    clear: both;
+    display: block;
+    left: 50%;
+    position: relative;
+}
+.pagintator li {
+    display: inline;
+}   
+    
+ /****************************Comments**************************/
+
+ #comment {
+    clear: both;
+    padding-left: 15px;
+}
+.comment-form {
+    width: 500px;
+}
+/********************************end Comments**************************/

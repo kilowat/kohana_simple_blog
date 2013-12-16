@@ -11,9 +11,7 @@
 <?endif;?>
 </div><!-- .content-->
 
-    <div class="right-sidebar-category">
-        <?=$lastNews ?>
-    </div>
+    
 <div class="pagintator">
 <ul>
 <?php

@@ -3,17 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/application/views/Admin/v_admin_category.php</file>
-            <file>file:/C:/xampp/htdocs/application/classes/Controller/Admin/News.php</file>
+            <file>file:/C:/xampp/htdocs/include/about.php</file>
+            <file>file:/C:/xampp/htdocs/application/views/Admin/v_admin_news_add.php</file>
             <file>file:/C:/xampp/htdocs/template/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/application/classes/Paginator.php</file>
-            <file>file:/C:/xampp/htdocs/application/views/v_category_news.php</file>
+            <file>file:/C:/xampp/htdocs/application/classes/Controller/Admin/News.php</file>
             <file>file:/C:/xampp/htdocs/application/classes/Controller/Index.php</file>
             <file>file:/C:/xampp/htdocs/application/views/Admin/v_admin_news.php</file>
-            <file>file:/C:/xampp/htdocs/application/classes/Controller/Admin/Category.php</file>
-            <file>file:/C:/xampp/htdocs/template/menu/js/menu.js</file>
-            <file>file:/C:/xampp/htdocs/application/classes/Controller/Category.php</file>
+            <file>file:/C:/xampp/htdocs/application/views/Admin/v_admin_news_edit.php</file>
+            <file>file:/C:/xampp/htdocs/application/classes/Controller/Admin/Index.php</file>
+            <file>file:/C:/xampp/htdocs/application/classes/Model/News.php</file>
             <file>file:/C:/xampp/htdocs/application/bootstrap.php</file>
+            <file>file:/C:/xampp/htdocs/application/views/Widjet/TopMenu/v_topMenu.php</file>
+            <file>file:/C:/xampp/htdocs/application/views/v_category_news.php</file>
+            <file>file:/C:/xampp/htdocs/application/classes/Controller/Admin/Page.php</file>
+            <file>file:/C:/xampp/htdocs/application/classes/Controller/Admin/Category.php</file>
+            <file>file:/C:/xampp/htdocs/application/views/v_index.php</file>
         </group>
     </open-files>
 </project-private>
