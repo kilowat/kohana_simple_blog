@@ -136,11 +136,17 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('category', 'category(/<action>(/<category>(/<page>)))',array('category'=>'[a-zA-Z0-9_]+','page'=>'page_[0-9]+'))
+Route::set('category', 'category/<action>(/<category>(/<page>))',array('category'=>'[a-zA-Z0-9_]+','page'=>'page_[0-9]+','action'=>'view'))
 	->defaults(array(
                 'controller'=>'category',
-                'action'=>'index'
+                'action'=>'view'
 	));
+Route::set('details', 'category/<action>(/<name>)',array('name'=>'[a-zA-Z0-9_/]+','action'=>'details'))
+	->defaults(array(
+                'controller'=>'category',
+                'action'=>'details'
+	));
+
 Route::set('admin', 'admin(/<controller>(/<action>(/<param>)))',array('param'=>'[0-9]+'))
 	->defaults(array(
                 'directory' => 'admin',

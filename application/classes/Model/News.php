@@ -7,9 +7,15 @@ class Model_News extends ORM{
     'category' => array(
         'model'       => 'Category',
         'foreign_key' => 'cat_id',
-    ),
-);
-     
+     ),
+    );
+    protected $_has_many = array(
+      'comments'=>array(
+          'model'=>'Comment',
+          'foreign_key'=>'news_id'
+      )  
+    );
+        
     function rules() {
         return array(
             'name'=>array(

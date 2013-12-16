@@ -28,5 +28,21 @@ class Controller_Admin_Category extends Controller_Admin_Main{
         }
     
        
-     }   
+     }
+     function action_edit(){
+         if($this->request->method()==='POST'){
+             $value = arr::get($_POST, 'category');
+                          var_dump($value);
+             $title = arr::get($_POST, 'catTitle');
+             $ormCategory = ORM::factory('Category')->where('id', '=', $value)->find();       
+            if($ormCategory->loaded()){
+               $ormCategory->set('title', $title)->update();          
+             }else{
+                 echo "category with this id not find";
+                 
+             }
+             
+         }
+         
+     }
 }

@@ -5,7 +5,7 @@ class Controller_Category extends Controller_Main{
       function action_view (){
      
         $pageParam = explode('_',$this->request->param('page'));
-      
+        
          $page = (int)end($pageParam);//номер страницы
          $catParam = $this->request->param('category');//параметр категория
          $orm = ORM::factory('News');
@@ -42,12 +42,14 @@ class Controller_Category extends Controller_Main{
                       
     }
     function action_details(){
-        $param = $this->request->param('category');
-        $arrParams= explode('/',$param);//алиас приходит последним параметром
-        $alias = end($arrParams);
-        
+        $param = $this->request->param('name');
+        $exParam = explode('/', $param);
+        $alias = end($exParam);
         $news = ORM::factory('News')->where('alias', '=', $alias)->find();
-        $center = View::factory('v_category_news_details')->bind('news', $news);
+        $comment = $news->comments->find_all();
+  
+        $center = View::factory('v_category_news_details')->bind('news', $news)
+                                                            ->bind('comment', $comment);
         
         $this->title = $news->title;
         $header = View::factory('v_header')->set('css', $this->css)
